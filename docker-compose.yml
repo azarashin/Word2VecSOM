@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+    som:
+        build:
+            context: ./som
+            dockerfile: Dockerfile
+        environment: 
+            - WIKI_URL=https://dumps.wikimedia.org/jawiki/latest/jawiki-latest-pages-articles.xml.bz2
+            - WIKI_DATA=/home/som/wiki/jawiki-latest-pages-articles.xml.bz2
+            - NEOLOGD_DATA=/home/som/neologd_dic
+            - TRAINING_SRC=/home/som/training.txt
+            - VECTOR_DATA=/home/som/vector.vec.pt
+
+        container_name: 'som'
+        working_dir: /home/som
+        
+        tty: true
+        volumes:
+        - ./som/engine:/home/som
+
+    web:
+        build:
+            context: web
+            dockerfile: Dockerfile
+        container_name: 'web'
+        environment: 
+            - PORT=80
+        working_dir: /home/web
+        tty: true
+        volumes:
+            - ./web/app:/home/web
+        ports:
+            - 8088:80
+        

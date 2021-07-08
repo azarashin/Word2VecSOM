@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+som/.wiki_extract
+som/wiki
+som/engine/.wiki_extract
+som/engine/.uni_dic
+som/engine/.neologd_dic
+web/app/node_modules/
+som/engine/table.csv
+som/engine/training.txt
+som/engine/umatrix.png
+som/engine/vector.vec.pt
+som/engine/wiki/jawiki-latest-pages-articles.xml.bz2
