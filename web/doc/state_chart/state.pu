@@ -7,6 +7,7 @@
 
 SM_1.EnterWord --> SM_2.Interupt : UC_1.Enter word
 SM_1.EnterWord -up-> SM_4.Signin : UC_5.Signing in
+SM_1.EnterWord --> SM_6.EditTitle : UC_2.Enter a pair of title and
 
 SM_2.Interupt --> SM_3.Dashboard : \
     UC_1.1.Interpret a word as a keyword \n\
@@ -33,11 +34,13 @@ SM_2.Interupt --> SM_3.Dashboard : \
 
 
 SM_3.Dashboard --> SM_2.Interupt : UC_1.Enter word
+SM_3.Dashboard --> SM_6.EditTitle : UC_2.Enter a pair of title and
 
 SM_4.Signin --> SM_1.EnterWord : UC_5.2.Success
 SM_4.Signin --> SM_4.Signin : UC_5.3.Failed
 
 SM_5.Signup --> SM_1.EnterWord : UC_5.5.4.2.Password is valid
 
+SM_6.EditTitle --> SM_2.Interupt : UC_1.Enter word
 
 @enduml
