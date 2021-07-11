@@ -1,20 +1,20 @@
 @startuml
 
-(UC-5.Signing in) .. (UC-5.1.Signed in)
-(UC-5.Signing in) .. (UC-5.2.Success) : extend
-(UC-5.Signing in) .. (UC-5.3.Failed) : extend
-(UC-5.Signing in) .. (UC-5.4.Canceled) : extend
+(UC_5.Signing in) .. (UC_5.1.Signed in)
+(UC_5.Signing in) .. (UC_5.2.Success) : extend
+(UC_5.Signing in) .. (UC_5.3.Failed) : extend
+(UC_5.Signing in) .. (UC_5.4.Canceled) : extend
 
-(UC-5.Signing in) .. (UC-5.5.Signing up) : extend
-(UC-5.5.Signing up) .. (UC-5.5.1.Set Email address) : include
-(UC-5.5.Signing up) .. (UC-5.5.2.Reseive Email with signup url) : include
-(UC-5.5.Signing up) .. (UC-5.5.3.Go to signedup url) : include
-(UC-5.5.Signing up) .. (UC-5.5.4.Set password twice) : include
+(UC_5.Signing in) .. (UC_5.5.Signing up) : extend
+(UC_5.5.Signing up) .. (UC_5.5.1.Set Email address) : include
+(UC_5.5.Signing up) .. (UC_5.5.2.Reseive Email with signup url) : include
+(UC_5.5.Signing up) .. (UC_5.5.3.Go to signedup url) : include
+(UC_5.5.Signing up) .. (UC_5.5.4.Set password twice) : include
 
-(UC-5.5.1.Set Email address) .. (UC-5.5.1.1.The Email addres is already registered) : extend
-(UC-5.5.1.Set Email address) .. (UC-5.5.1.2.The Email addres is not registered yet) : extend
+(UC_5.5.1.Set Email address) .. (UC_5.5.1.1.The Email addres is already registered) : extend
+(UC_5.5.1.Set Email address) .. (UC_5.5.1.2.The Email addres is not registered yet) : extend
 
-(UC-5.5.4.Set password twice) .. (UC-5.5.4.1.Password is invalid) : extend
-(UC-5.5.4.Set password twice) .. (UC-5.5.4.2.Password is valid) : extend
+(UC_5.5.4.Set password twice) .. (UC_5.5.4.1.Password is invalid) : extend
+(UC_5.5.4.Set password twice) .. (UC_5.5.4.2.Password is valid) : extend
 
 @enduml

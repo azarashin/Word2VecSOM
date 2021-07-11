@@ -1,37 +1,37 @@
 @startuml
 
 [*] --> EnterWord
-EnterWord --> Interupt : UC-1.Enter word
+SM_1.EnterWord --> Interupt : UC_1.Enter word
 
 Interupt --> Dashboard : \
-    UC-1.1.Interpret a word as a keyword \n\
+    UC_1.1.Interpret a word as a keyword \n\
     / \n\
-    UC-3.Show a list of similar words \n\
-    UC-3.1.Show the similarity between words
+    UC_3.Show a list of similar words \n\
+    UC_3.1.Show the similarity between words
 
 Interupt --> Dashboard : \
-    UC-1.2.Interpret a word as a title \n\
+    UC_1.2.Interpret a word as a title \n\
     not signed in \n\
     / \n\
-    UC-3.Show a list of similar words \n\
-    UC-3.1.Show the similarity between words
+    UC_3.Show a list of similar words \n\
+    UC_3.1.Show the similarity between words
 
 Interupt --> Dashboard : \
-    UC-1.2.Interpret a word as a title \n\
+    UC_1.2.Interpret a word as a title \n\
     signed in \n\
     / \n\
-    UC-3.Show a list of similar words \n\
-    UC-3.1.Show the similarity between words \n\
-    UC-4.Show related titles \n\
-    UC-4.1.Show the similarity between word and title
+    UC_3.Show a list of similar words \n\
+    UC_3.1.Show the similarity between words \n\
+    UC_4.Show related titles \n\
+    UC_4.1.Show the similarity between word and title
 
 
 
-Dashboard --> Interupt : UC-1.Enter word
+Dashboard --> Interupt : UC_1.Enter word
 
-EnterWord -up-> Signin : UC-5.Signing in
-Signin --> EnterWord : UC-5.1.Success
-Signin --> Signin : UC-5.2.Failed
+EnterWord -up-> Signin : UC_5.Signing in
+Signin --> EnterWord : UC_5.1.Success
+Signin --> Signin : UC_5.2.Failed
 
 
 @enduml
