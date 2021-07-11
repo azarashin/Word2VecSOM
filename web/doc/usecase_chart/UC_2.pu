@@ -1,0 +1,7 @@
+@startuml
+
+(UC_2.Edit titles) .. (UC_2.1.Enter title) : include
+(UC_2.Edit titles) .. (UC_2.2.Enter keywords) : include
+(UC_2.Edit titles) .. (UC_2.3.Remove keywords) : include
+(UC_2.1.Enter title) .. (UC_2.1.1.Show a list of keywords) : include
+@enduml

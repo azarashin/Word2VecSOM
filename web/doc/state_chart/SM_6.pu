@@ -1,0 +1,10 @@
+@startuml
+
+state SM_6.EditTitle {
+    [*] --> SM_6.1.EditTitleIdle
+    SM_6.1.EditTitleIdle --> [*] : UC_1.Enter word
+    SM_6.1.EditTitleIdle --> SM_6.1.EditTitleIdle : UC_2.1.Enter a pair of title and keywords
+}
+
+
+@enduml
