@@ -1,8 +1,8 @@
 @startuml
-User --> (UC-5.logging in)
+User --> (UC-5.Signing in)
 User --> (UC-1.Enter word)
 
-(UC-5.logging in) --> (UC-2.Enter a pair of title and keyword)
+(UC-5.Signing in) --> (UC-2.Enter a pair of title and keyword)
 
 (UC-1.Enter word) --> (UC-3.Show a list of similar words)
 (UC-1.Enter word) --> (UC-4.Show related titles)

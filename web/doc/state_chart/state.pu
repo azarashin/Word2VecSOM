@@ -29,7 +29,7 @@ Interupt --> Dashboard : \
 
 Dashboard --> Interupt : UC-1.Enter word
 
-EnterWord -up-> Login : UC-5.logging in
+EnterWord -up-> Login : UC-5.Signing in
 Login --> EnterWord : UC-5.1.Success
 Login --> Login : UC-5.2.Failed
 
