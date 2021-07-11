@@ -1,11 +1,10 @@
 @startuml
 
-state Signin {
-    [*] --> SigninIdle
-    SigninIdle --> SigninIdle : UC_5.3.Failed
-    SigninIdle --> [*] : UC_5.2.Success / UC_5.1.Signed in
-    SigninIdle --> [*] : UC_5.4.Canceled
-
+state SM_4.Signin {
+    [*] --> SM_4.1.SigninIdle
+    SM_4.1.SigninIdle --> SM_4.1.SigninIdle : UC_5.3.Failed
+    SM_4.1.SigninIdle --> [*] : UC_5.2.Success / UC_5.1.Signed in
+    SM_4.1.SigninIdle --> [*] : UC_5.4.Canceled
 }
 
 

@@ -1,22 +1,22 @@
 @startuml
 
-[*] --> EnterWord
-SM_1.EnterWord --> Interupt : UC_1.Enter word
+[*] --> SM_1.EnterWord
+SM_1.EnterWord --> SM_2.Interupt : UC_1.Enter word
 
-Interupt --> Dashboard : \
+SM_2.Interupt --> SM_3.Dashboard : \
     UC_1.1.Interpret a word as a keyword \n\
     / \n\
     UC_3.Show a list of similar words \n\
     UC_3.1.Show the similarity between words
 
-Interupt --> Dashboard : \
+SM_2.Interupt --> SM_3.Dashboard : \
     UC_1.2.Interpret a word as a title \n\
     not signed in \n\
     / \n\
     UC_3.Show a list of similar words \n\
     UC_3.1.Show the similarity between words
 
-Interupt --> Dashboard : \
+SM_2.Interupt --> SM_3.Dashboard : \
     UC_1.2.Interpret a word as a title \n\
     signed in \n\
     / \n\
@@ -27,11 +27,11 @@ Interupt --> Dashboard : \
 
 
 
-Dashboard --> Interupt : UC_1.Enter word
+SM_3.Dashboard --> SM_2.Interupt : UC_1.Enter word
 
-EnterWord -up-> Signin : UC_5.Signing in
-Signin --> EnterWord : UC_5.1.Success
-Signin --> Signin : UC_5.2.Failed
+SM_1.EnterWord -up-> SM_4.Signin : UC_5.Signing in
+SM_4.Signin --> SM_1.EnterWord : UC_5.1.Success
+SM_4.Signin --> SM_4.Signin : UC_5.2.Failed
 
 
 @enduml
