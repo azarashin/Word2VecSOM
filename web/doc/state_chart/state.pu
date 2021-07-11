@@ -1,7 +1,12 @@
 @startuml
 
 [*] --> SM_1.EnterWord
+[*] --> SM_5.Signup : \
+    UC_5.5.2.Reseive Email with signup url \n\
+    UC_5.5.3.Go to signedup url
+
 SM_1.EnterWord --> SM_2.Interupt : UC_1.Enter word
+SM_1.EnterWord -up-> SM_4.Signin : UC_5.Signing in
 
 SM_2.Interupt --> SM_3.Dashboard : \
     UC_1.1.Interpret a word as a keyword \n\
@@ -29,9 +34,10 @@ SM_2.Interupt --> SM_3.Dashboard : \
 
 SM_3.Dashboard --> SM_2.Interupt : UC_1.Enter word
 
-SM_1.EnterWord -up-> SM_4.Signin : UC_5.Signing in
 SM_4.Signin --> SM_1.EnterWord : UC_5.1.Success
 SM_4.Signin --> SM_4.Signin : UC_5.2.Failed
+
+SM_5.Signup --> SM_1.EnterWord : UC_5.5.4.2.Password is valid
 
 
 @enduml

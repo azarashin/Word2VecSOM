@@ -1,0 +1,15 @@
+@startuml
+
+state SM_5.Signup {
+    [*] --> SM_5.1.SignupIdle
+    SM_5.1.SignupIdle --> SM_5.1.SignupIdle : \
+        UC_5.5.4.Set password twice \n\
+        UC_5.5.4.1.Password is invalid
+
+    SM_5.1.SignupIdle --> [*] : \
+        UC_5.5.4.Set password twice \n\
+        UC_5.5.4.2.Password is valid
+
+}
+
+@enduml
