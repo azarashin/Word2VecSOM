@@ -1,0 +1,5 @@
+@startuml
+
+(UC-4.Show related titles) .. (UC-4.1.Show the similarity between word and title) : extend
+
+@enduml

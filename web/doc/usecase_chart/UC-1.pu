@@ -1,0 +1,6 @@
+@startuml
+
+(UC-1.Enter word) .. (UC-1.1.Interpret a word as a keyword) : extend
+(UC-1.Enter word) .. (UC-1.2.Interpret a word as a title) : extend
+
+@enduml

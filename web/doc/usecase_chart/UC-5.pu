@@ -1,0 +1,8 @@
+@startuml
+
+(UC-5.logging in) .. (UC-5.1.Logged in)
+(UC-5.logging in) .. (UC-5.2.Success) : extend
+(UC-5.logging in) .. (UC-5.3.Failed) : extend
+(UC-5.logging in) .. (UC-5.4.Canceled) : extend
+
+@enduml

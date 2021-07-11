@@ -1,0 +1,5 @@
+@startuml
+
+(UC-3.Show a list of similar words) .. (UC-3.1.Show the similarity between words) : extend
+
+@enduml
