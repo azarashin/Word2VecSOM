@@ -1,12 +1,13 @@
 @startuml
 
-state Login {
-    [*] --> LoginIdle
-    LoginIdle --> LoginIdle : UC-5.3.Failed
-    LoginIdle --> [*] : UC-5.2.Success / UC-5.1.Signed in
-    LoginIdle --> [*] : UC-5.4.Canceled
+state Signin {
+    [*] --> SigninIdle
+    SigninIdle --> SigninIdle : UC-5.3.Failed
+    SigninIdle --> [*] : UC-5.2.Success / UC-5.1.Signed in
+    SigninIdle --> [*] : UC-5.4.Canceled
     
 }
+
 
 
 @enduml

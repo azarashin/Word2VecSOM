@@ -11,14 +11,14 @@ Interupt --> Dashboard : \
 
 Interupt --> Dashboard : \
     UC-1.2.Interpret a word as a title \n\
-    not logged in \n\
+    not signed in \n\
     / \n\
     UC-3.Show a list of similar words \n\
     UC-3.1.Show the similarity between words
 
 Interupt --> Dashboard : \
     UC-1.2.Interpret a word as a title \n\
-    logged in \n\
+    signed in \n\
     / \n\
     UC-3.Show a list of similar words \n\
     UC-3.1.Show the similarity between words \n\
@@ -29,9 +29,9 @@ Interupt --> Dashboard : \
 
 Dashboard --> Interupt : UC-1.Enter word
 
-EnterWord -up-> Login : UC-5.Signing in
-Login --> EnterWord : UC-5.1.Success
-Login --> Login : UC-5.2.Failed
+EnterWord -up-> Signin : UC-5.Signing in
+Signin --> EnterWord : UC-5.1.Success
+Signin --> Signin : UC-5.2.Failed
 
 
 @enduml
