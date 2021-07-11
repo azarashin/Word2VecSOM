@@ -4,7 +4,15 @@ state SM_6.EditTitle {
     [*] --> SM_6.1.EditTitleIdle
     SM_6.1.EditTitleIdle --> [*] : UC_1.Enter word
     SM_6.1.EditTitleIdle --> SM_6.1.EditTitleIdle : UC_2.1.Enter a pair of title and keywords
-}
 
+    SM_6.1.EditTitleIdle --> SM_6.1.EditTitleIdle : \
+        UC_2.1.Enter title \n\
+        /\n\
+        UC_2.1.1.Show a list of keywords
+
+    SM_6.1.EditTitleIdle --> SM_6.1.EditTitleIdle : UC_2.2.Enter keywords
+    SM_6.1.EditTitleIdle --> SM_6.1.EditTitleIdle : UC_2.3.Remove keywords
+
+}
 
 @enduml
