@@ -1,13 +1,15 @@
 @startuml
 User --> (UC_5.Signing in)
-User --> (UC_1.Enter word)
+User --> (UC_0.Visit this service)
+
+(UC_0.Visit this service) --> (UC_1.Enter word)
 
 (UC_5.Signing in) --> (UC_2.Enter a pair of title and keyword)
 
 (UC_1.Enter word) --> (UC_3.Show a list of similar words)
 (UC_1.Enter word) --> (UC_4.Show related titles)
 
-(UC_2.Enter a pair of title and keyword) ..> (UC_4.Show related titles)
+(UC_2.Enter a pair of title and keyword) ..> (UC_4.Show related titles) : required
 
 
 @enduml
